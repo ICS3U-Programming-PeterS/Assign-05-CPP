@@ -368,7 +368,7 @@ int main() {
                 case 5:
                     system("clear");
                     std::cout << "******************";
-                    std::cout << "\nTo solve for m,"
+                    std::cout << "\nTo solve for m, "
                               << "you need y1, y2, x1 and x2.";
 
                     // get input for values y1, y2, x1 and x2
@@ -392,7 +392,7 @@ int main() {
                                     int x2User = std::stoi(x2AsAString);
                                     if (x1User == x2User) {
                                         std::cout << "x1 and x2"
-                                        << "cannot be equal.";
+                                        << " cannot be equal.\n \n";
                                     } else {
                                         if (-1 >= y1User) {
                                             double solvedM =
