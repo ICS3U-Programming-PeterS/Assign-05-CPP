@@ -390,94 +390,114 @@ int main() {
                                 std::cin >> x2AsAString;
                                 try {
                                     int x2User = std::stoi(x2AsAString);
-                                    if (-1 >= y1User) {
-                                        double solvedM =
-                                        SolveM2(x1User, x2User,
-                                        y1User, y2User);
-                                        double solvedB =
-                                        SolveForYInt(x1User, x2User, y1User,
-                                        y2User, solvedM);
-                                        if (solvedB > 0) {
-                                            std::cout << "The value of b is "
-                                                      << solvedB << "."
-                                                      << "\n"
-                                                      << "The equation is y = "
-                                                      << solvedM
-                                                      << "x + "
-                                                      << solvedB
-                                                      << "\n"
-                                                      << "\n";
-                                        } else {
-                                            std::cout << "The value of b is "
-                                                      << solvedB << "."
-                                                      << "\n";
-                                            solvedB = solvedB * -1;
-                                            std::cout << "The equation is y = "
-                                                      << solvedM
-                                                      << "x - "
-                                                      << solvedB
-                                                      << "\n"
-                                                      << "\n";
-                                        }
+                                    if (x1User == x2User) {
+                                        std::cout << "x1 and x2"
+                                        << "cannot be equal.";
+                                    } else {
+                                        if (-1 >= y1User) {
+                                            double solvedM =
+                                                SolveM2(x1User, x2User,
+                                                        y1User, y2User);
+                                            double solvedB =
+                                                SolveForYInt(x1User,
+                                                            x2User, y1User,
+                                                            y2User, solvedM);
+                                            if (solvedB > 0) {
+                                                std::cout << "The value"
+                                                << " of b is "
+                                                          << solvedB << "."
+                                                          << "\n"
+                                                          << "The equation"
+                                                          << " is y = "
+                                                          << solvedM
+                                                          << "x + "
+                                                          << solvedB
+                                                          << "\n"
+                                                          << "\n";
+                                            } else {
+                                                std::cout << "The value"
+                                                << " of b is "
+                                                          << solvedB << "."
+                                                          << "\n";
+                                                solvedB = solvedB * -1;
+                                                std::cout << "The equation"
+                                                << " is y = "
+                                                          << solvedM
+                                                          << "x - "
+                                                          << solvedB
+                                                          << "\n"
+                                                          << "\n";
+                                            }
 
-                                    } else if (-1 >= x1User) {
-                                        double solvedM =
-                                        SolveM3(x1User, x2User,
-                                        y1User, y2User);
-                                        double solvedB =
-                                        SolveForYInt(x1User, x2User, y1User,
-                                        y2User, solvedM);
-                                        if (solvedB > 0) {
-                                            std::cout << "The value of b is "
-                                                      << solvedB << "."
-                                                      << "\n"
-                                                      << "The equation is y = "
-                                                      << solvedM
-                                                      << "x + "
-                                                      << solvedB
-                                                      << "\n"
-                                                      << "\n";
-                                        } else {
-                                            std::cout << "The value of b is "
-                                                      << solvedB << "."
-                                                      << "\n";
-                                            solvedB = solvedB * -1;
-                                            std::cout << "The equation is y = "
-                                                      << solvedM
-                                                      << "x - "
-                                                      << solvedB
-                                                      << "\n"
-                                                      << "\n";
-                                        }
+                                        } else if (-1 >= x1User) {
+                                            double solvedM =
+                                                SolveM3(x1User, x2User,
+                                                        y1User, y2User);
+                                            double solvedB =
+                                                SolveForYInt(x1User,
+                                                            x2User, y1User,
+                                                            y2User, solvedM);
+                                            if (solvedB > 0) {
+                                                std::cout << "The value"
+                                                << " of b is "
+                                                          << solvedB << "."
+                                                          << "\n"
+                                                          << "The equation"
+                                                          << " is y = "
+                                                          << solvedM
+                                                          << "x + "
+                                                          << solvedB
+                                                          << "\n"
+                                                          << "\n";
+                                            } else {
+                                                std::cout << "The value"
+                                                <<" of b is "
+                                                          << solvedB << "."
+                                                          << "\n";
+                                                solvedB = solvedB * -1;
+                                                std::cout << "The equation"
+                                                << " is y = "
+                                                          << solvedM
+                                                          << "x - "
+                                                          << solvedB
+                                                          << "\n"
+                                                          << "\n";
+                                            }
 
-                                    } else if (-1 <= x1User) {
-                                        double solvedM =
-                                        SolveM1(x1User, x2User,
-                                        y1User, y2User);
-                                        double solvedB =
-                                        SolveForYInt(x1User, x2User, y1User,
-                                        y2User, solvedM);
-                                        if (solvedB > 0) {
-                                            std::cout << "The value of b is "
-                                                      << solvedB << "."
-                                                      << "\n"
-                                                      << "The equation is y = "
-                                                      << solvedM
-                                                      << "x + "
-                                                      << solvedB
-                                                      << "\n"
-                                                      << "\n";
-                                        } else {
-                                            std::cout << "The value of b is "
-                                                      << solvedB << "."
-                                                      << "\n";
-                                            solvedB = solvedB * -1;
-                                            std::cout << "The equation is y = "
-                                                      << solvedM
-                                                      << "x - "
-                                                      << solvedB
-                                                      << "\n"
-                                                      << "\n";
+                                        } else if (-1 <= x1User) {
+                                            double solvedM =
+                                                SolveM1(x1User, x2User,
+                                                        y1User, y2User);
+                                            double solvedB =
+                                                SolveForYInt(x1User,
+                                                x2User, y1User,
+                                                y2User, solvedM);
+                                            if (solvedB > 0) {
+                                                std::cout << "The value"
+                                                << " of b is "
+                                                          << solvedB << "."
+                                                          << "\n"
+                                                          << "The equation"
+                                                          << " is y = "
+                                                          << solvedM
+                                                          << "x + "
+                                                          << solvedB
+                                                          << "\n"
+                                                          << "\n";
+                                            } else {
+                                                std::cout << "The value"
+                                                          << " of b is "
+                                                          << solvedB << "."
+                                                          << "\n";
+                                                solvedB = solvedB * -1;
+                                                std::cout << "The equation"
+                                                << " is y = "
+                                                << solvedM
+                                                << "x - "
+                                                << solvedB
+                                                << "\n"
+                                                << "\n";
+                                            }
                                         }
                                     }
                                 } catch (std::invalid_argument) {
